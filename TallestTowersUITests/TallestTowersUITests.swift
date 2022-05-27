@@ -13,8 +13,7 @@ class TallestTowersUITests: XCTestCase {
     app.tables.buttons.element(matching: burjKhalifaPredicate).tap()
     app.navigationBars.buttons["Tallest Towers"].tap()
 
-      XCUIApplication().tables/*@START_MENU_TOKEN@*/.buttons["China Zun, Beijing, China, 528m"]/*[[".cells[\"China Zun, Beijing, China, 528m\"].buttons[\"China Zun, Beijing, China, 528m\"]",".buttons[\"China Zun, Beijing, China, 528m\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-          let shanghaiTowerPredicate = NSPredicate(format: "label beginswith 'Shanghai Tower'")
+    let shanghaiTowerPredicate = NSPredicate(format: "label beginswith 'Shanghai Tower'")
     app.tables.buttons.element(matching: shanghaiTowerPredicate).tap()
     app.navigationBars.buttons["Tallest Towers"].tap()
   }
