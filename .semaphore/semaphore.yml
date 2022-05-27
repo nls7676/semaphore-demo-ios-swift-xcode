@@ -20,7 +20,6 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec xcversion select 13.3
             - bundle exec fastlane test
   - name: Build app
     task:
