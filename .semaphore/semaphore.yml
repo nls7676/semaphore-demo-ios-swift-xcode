@@ -18,7 +18,7 @@ name: Tallest Towers
 agent:
   machine:
     type: a1-standard-4
-    os_image: macos-xcode13
+    os_image: macos-xcode12
 
 # Blocks are the heart of a pipeline and are executed sequentially. Each block
 # has a task that defines one or more parallel jobs. Jobs define commands that
@@ -54,7 +54,7 @@ blocks:
             # Select an Xcode version.
             # See https://docs.semaphoreci.com/article/161-macos-mojave-xcode-10-image and
             # https://docs.semaphoreci.com/article/162-macos-mojave-xcode-11-image
-            - bundle exec xcversion select 13.4
+            - bundle exec xcversion select 12.2
 
             # Run tests of iOS and Mac app on a simulator or connected device.
             # See https://docs.fastlane.tools/actions/scan/
@@ -90,7 +90,7 @@ blocks:
       jobs:
         - name: Build
           commands:
-            - bundle exec xcversion select 13.4
+            - bundle exec xcversion select 12.2
             - bundle exec fastlane build
 
             # Upload the IPA file as a job artifact.
@@ -115,7 +115,7 @@ blocks:
       jobs:
         - name: Screenshots
           commands:
-            - bundle exec xcversion select 13.4
+            - bundle exec xcversion select 12.2
 
             # Fix for fastlane snapshot not allways finding the simular.
             # In case you find errors like "Simulator not found", use this workarround
